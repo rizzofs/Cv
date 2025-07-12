@@ -2,214 +2,575 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <title>CV - Federico Rizzo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mi Currículum Profesional</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="cv-container">
-      <header class="encabezado">
-        <img src="Foto.jpeg" alt="Foto de Federico" class="foto-perfil" />
-        <div class="info-contacto">
+    <div class="container" id="content-to-print">
+      <header>
+        <div class="header-content">
+          <img
+            src="Foto.jpeg"
+            alt="Retrato profesional de una persona sonriente con traje y corbata sobre fondo neutro"
+            class="profile-img"
+          />
           <h1>Federico Sebastián Rizzo</h1>
-          <br />
-          <p>📍 Chivilcoy, Buenos Aires</p>
-          <p>📞 2346-612609</p>
-          <p>✉️ federico.s.rizzo@gmail.com</p>
+          <div class="title">Estudiante Lic. en sistemas de Información</div>
+          <div class="contact-info">
+            <div class="contact-item">
+              <i class="fas fa-envelope"></i>
+              <span>federico.s.rizzo@gmail.com</span>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-phone"></i>
+              <span>+5492346612609</span>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Chivilcoy, Buenos Aires</span>
+            </div>
+          </div>
         </div>
       </header>
 
-      <section>
-        <h2>Perfil Profesional</h2>
-        <p class="justificado">
-          Soy estudiante avanzado de la Licenciatura en Sistemas de Información,
-          con experiencia comprobable tanto en el área administrativa como en el
-          desarrollo web. Me desempeño con soltura en tareas de facturación,
-          coordinación operativa, atención al cliente y gestión de datos, así
-          como también en el diseño y construcción de sitios web y sistemas a
-          medida.
-        </p>
-        <p class="justificado">
-          Manejo herramientas como Excel avanzado, Tango Gestión, HTML, CSS,
-          JavaScript y Git. Me destaco por mi compromiso, responsabilidad y
-          adaptabilidad. Busco integrarme a un equipo donde pueda aportar en
-          cualquiera de estos dos ámbitos —administrativo o técnico— y seguir
-          creciendo profesionalmente.
-        </p>
-      </section>
-
-      <section class="experiencia-laboral">
-        <h2>Experiencia Laboral</h2>
-        <div class="grid-exp">
-          <div class="exp-item">
-            <p>
-              <strong>Remises Bruno</strong><br />
-              <em
-                >Coordinador y Asistente de Facturación<br />Oct. 2016 –
-                Actualidad</em
-              ><br />
-              Coordinación de personal, turnos, facturación, atención al cliente
-              y tareas administrativas generales.
-            </p>
-
-            <p>
-              <strong>Maxikiosco Matute</strong><br />
-              <em>Atención al publico<br />Sep. 2023 – Mar. 2024</em><br />
-              Atención directa al cliente, manejo de caja, reposición de
-              mercadería, control de stock, mantenimiento del orden del local y
-              recepción de proveedores.
-            </p>
-
-            <p>
-              <strong>Remises City Bruno</strong><br />
-              <em>Coordinador<br />Jun. 2016 – Oct. 2016</em><br />
-              Gestión de horarios, novedades y documentación interna.
-            </p>
-
-            <p>
-              <strong>Remises Juan Carlos</strong><br />
-              <em>Coordinador<br />Abr. 2015 – May. 2016</em><br />
-              Coordinación operativa y control de tareas.
-            </p>
-
-            <p>
-              <strong>Distri-Fer</strong><br />
-              <em>Vendedor - Repartidor<br />Sep. 2012 – Ene. 2015</em><br />
-              Entrega, cobranzas, control de stock, contacto con clientes.
-            </p>
-
-            <p>
-              <strong>Bartolo Pub-Bar</strong><br />
-              <em>Delivery / Ayudante de Cocina<br />Sep. 2011 – Dic. 2012</em
-              ><br />
-              Cocina, reparto y colaboración en tareas generales.
-            </p>
-          </div>
-
-          <div class="exp-item">
-            <p>
-              <strong>City Shop</strong><br />
-              <em>Operario de Depósito<br />Nov. 2011 – Ene. 2012</em><br />
-              Inventario y organización de stock.
-            </p>
-
-            <p>
-              <strong>Instituto Tecnológico</strong><br />
-              <em>Profesor Auxiliar<br />May. 2011 – Ago. 2011</em><br />
-              Cursos de informática, asistencia y enseñanza.
-            </p>
-
-            <p>
-              <strong>Talleres Carmona</strong><br />
-              <em>Asistente Comercial (Molykote)<br />Feb. 2009 – Sep. 2010</em
-              ><br />
-              Facturación, uso de Tango y Excel, atención comercial.
-            </p>
-
-            <p>
-              <strong>Mora Resto Bar</strong><br />
-              <em>Ayudante de Cocina<br />Sep. 2008 – Ene. 2009</em><br />
-              Preparación y asistencia en cocina.
-            </p>
-
-            <p>
-              <strong>Shopping El Molino</strong><br />
-              <em>Atención Sala de Juegos<br />Oct. 2007 – Sep. 2008</em><br />
-              Atención al cliente y supervisión.
-            </p>
-
-            <p>
-              <strong>Paquetá</strong><br />
-              <em>Operario<br />Ene. 2007 – Ago. 2007</em><br />
-              Producción y control de calidad.
-            </p>
-          </div>
+      <section class="section">
+        <h2 class="section-title">
+          <i class="fas fa-user"></i> Perfil Profesional
+        </h2>
+        <div class="profile-text">
+          <p>
+            Desarrollador web junior con sólida formación académica y
+            experiencia práctica en proyectos reales. Estudiante avanzado de la
+            Licenciatura en Sistemas de Información (UNLu), con competencias en
+            desarrollo frontend y backend utilizando HTML, CSS, JavaScript,
+            React, Git y bases de datos relacionales.
+          </p>
+          <br>
+          <p>
+            Actualmente me desempeño como presidente del centro de estudiantes,
+            rol en el que potencio mis habilidades de liderazgo, organización y
+            trabajo en equipo. Complemento mi perfil técnico con experiencia en
+            tareas administrativas, facturación y atención al cliente. Busco
+            integrarme a un equipo de desarrollo donde pueda aportar valor desde
+            lo técnico, aprender de otros profesionales y seguir creciendo de
+            forma continua.
+          </p>
         </div>
       </section>
 
-      <section class="formacion-cursos">
-        <div class="columna">
-          <h2>Formación Académica</h2>
-          <ul>
-            <li>Licenciatura en Sistemas de Información – UNLu (en curso)</li>
-            <li>Secundario completo – Escuela N°11, Chivilcoy</li>
-          </ul>
+      <div class="two-column">
+        <div class="column">
+          <section class="section">
+            <h2 class="section-title">
+              <i class="fas fa-briefcase"></i> Experiencia Laboral
+            </h2>
+
+            <div class="experience-item">
+              <div class="item-header">
+                <div class="item-title">
+                  Coordinador y Asistente de Facturación
+                </div>
+                <div class="item-date">Oct. 2016 – Actualidad</div>
+              </div>
+              <div class="item-subtitle">Remises Bruno</div>
+              <div class="item-description">
+                <ul class="item-list">
+                  <li>Coordinación de personal y asignación de turnos</li>
+                  <li>Gestión de facturación y tareas administrativas</li>
+                  <li>Atención al cliente y resolución de consultas</li>
+                  <li>Supervisión del funcionamiento operativo</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="experience-item">
+              <div class="item-header">
+                <div class="item-title">Atención al público</div>
+                <div class="item-date">Sep. 2023 – Mar. 2024</div>
+              </div>
+              <div class="item-subtitle">Maxikiosco Matute</div>
+              <div class="item-description">
+                <ul class="item-list">
+                  <li>Atención directa al cliente</li>
+                  <li>Manejo de caja y cobros</li>
+                  <li>Reposición de mercadería y control de stock</li>
+                  <li>Orden del local y recepción de proveedores</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="experience-item">
+              <div class="item-header">
+                <div class="item-title">Coordinador</div>
+                <div class="item-date">Jun. 2016 – Oct. 2016</div>
+              </div>
+              <div class="item-subtitle">Remises City Bruno</div>
+              <div class="item-description">
+                <ul class="item-list">
+                  <li>Gestión de horarios y turnos</li>
+                  <li>Manejo de documentación interna</li>
+                  <li>Supervisión operativa</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="experience-item">
+              <div class="item-header">
+                <div class="item-title">Coordinador</div>
+                <div class="item-date">Abr. 2015 – May. 2016</div>
+              </div>
+              <div class="item-subtitle">Remises Juan Carlos</div>
+              <div class="item-description">
+                <ul class="item-list">
+                  <li>Coordinación operativa del servicio</li>
+                  <li>Control de tareas y cumplimiento de horarios</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="experience-item">
+              <div class="item-header">
+                <div class="item-title">Vendedor - Repartidor</div>
+                <div class="item-date">Sep. 2012 – Ene. 2015</div>
+              </div>
+              <div class="item-subtitle">Distri-Fer</div>
+              <div class="item-description">
+                <ul class="item-list">
+                  <li>Entrega y distribución de productos</li>
+                  <li>Gestión de cobranzas</li>
+                  <li>Control de stock</li>
+                  <li>Atención comercial a clientes</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="experience-item">
+              <div class="item-header">
+                <div class="item-title">Delivery / Ayudante de Cocina</div>
+                <div class="item-date">Sep. 2011 – Dic. 2012</div>
+              </div>
+              <div class="item-subtitle">Bartolo Pub-Bar</div>
+              <div class="item-description">
+                <ul class="item-list">
+                  <li>Reparto de pedidos a domicilio</li>
+                  <li>Asistencia en tareas de cocina</li>
+                  <li>Colaboración en mantenimiento general</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="experience-item">
+              <div class="item-header">
+                <div class="item-title">Operario de Depósito</div>
+                <div class="item-date">Nov. 2011 – Ene. 2012</div>
+              </div>
+              <div class="item-subtitle">City Shop</div>
+              <div class="item-description">
+                <ul class="item-list">
+                  <li>Inventario de productos</li>
+                  <li>Organización de stock</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="experience-item">
+              <div class="item-header">
+                <div class="item-title">Profesor Auxiliar</div>
+                <div class="item-date">May. 2011 – Ago. 2011</div>
+              </div>
+              <div class="item-subtitle">Instituto Tecnológico</div>
+              <div class="item-description">
+                <ul class="item-list">
+                  <li>Dictado de cursos de informática básica</li>
+                  <li>Asistencia y acompañamiento educativo</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="experience-item">
+              <div class="item-header">
+                <div class="item-title">Asistente Comercial</div>
+                <div class="item-date">Feb. 2009 – Sep. 2010</div>
+              </div>
+              <div class="item-subtitle">Talleres Carmona (Molykote)</div>
+              <div class="item-description">
+                <ul class="item-list">
+                  <li>Facturación y atención comercial</li>
+                  <li>Uso de Tango Gestión y Excel</li>
+                  <li>Organización de documentación</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="experience-item">
+              <div class="item-header">
+                <div class="item-title">Ayudante de Cocina</div>
+                <div class="item-date">Sep. 2008 – Ene. 2009</div>
+              </div>
+              <div class="item-subtitle">Mora Resto Bar</div>
+              <div class="item-description">
+                <ul class="item-list">
+                  <li>Preparación de comidas</li>
+                  <li>Asistencia al cocinero principal</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="experience-item">
+              <div class="item-header">
+                <div class="item-title">Atención Sala de Juegos</div>
+                <div class="item-date">Oct. 2007 – Sep. 2008</div>
+              </div>
+              <div class="item-subtitle">Shopping El Molino</div>
+              <div class="item-description">
+                <ul class="item-list">
+                  <li>Atención al cliente</li>
+                  <li>Supervisión del área de juegos</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="experience-item">
+              <div class="item-header">
+                <div class="item-title">Operario</div>
+                <div class="item-date">Ene. 2007 – Ago. 2007</div>
+              </div>
+              <div class="item-subtitle">Paquetá</div>
+              <div class="item-description">
+                <ul class="item-list">
+                  <li>Producción en línea</li>
+                  <li>Control de calidad de productos</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <section class="section">
+            <h2 class="section-title">
+              <i class="fas fa-graduation-cap"></i> Formación Académica
+            </h2>
+
+            <div class="course-item">
+              <div class="item-header">
+                <div class="item-title">
+                  Licenciatura en Sistemas de Información
+                </div>
+                <div class="item-date">En curso</div>
+              </div>
+              <div class="item-subtitle">
+                Universidad Nacional de Luján (UNLu)
+              </div>
+              <div class="item-description">
+                <ul class="item-list">
+                  <li>
+                    Área de enfoque: programación, sistemas, UX y proyectos
+                    tecnológicos
+                  </li>
+                  <li>
+                    Aplicación en desarrollo web, análisis y diseño de sistemas
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="course-item">
+              <div class="item-header">
+                <div class="item-title">Secundario completo</div>
+                <div class="item-date">Finalizado</div>
+              </div>
+              <div class="item-subtitle">Escuela N°11, Chivilcoy</div>
+              <div class="item-description">
+                <ul class="item-list">
+                  <li>Formación general en ciencias sociales y exactas</li>
+                  <li>Habilidades interpersonales y organizativas</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <section class="section">
+            <h2 class="section-title">
+              <i class="fas fa-certificate"></i> Cursos Realizados
+            </h2>
+
+            <div class="course-item">
+              <div class="item-header">
+                <div class="item-title">Desarrollo Web</div>
+                <div class="item-date">2022</div>
+              </div>
+              <div class="item-subtitle">Argentina Programa</div>
+              <div class="item-description">
+                <ul class="item-list">
+                  <li>Duración: 60+ horas</li>
+                  <li>
+                    Habilidades adquiridas: HTML, CSS, JS, diseño adaptativo
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="course-item">
+              <div class="item-header">
+                <div class="item-title">Diseño de sistemas interactivos</div>
+                <div class="item-date">2022</div>
+              </div>
+              <div class="item-subtitle">ECI 35</div>
+              <div class="item-description">
+                <ul class="item-list">
+                  <li>Duración: 25 horas</li>
+                  <li>
+                    Temas cubiertos: diseño centrado en el usuario, wireframes,
+                    accesibilidad
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="course-item">
+              <div class="item-header">
+                <div class="item-title">Introducción a las APIs</div>
+                <div class="item-date">2022</div>
+              </div>
+              <div class="item-subtitle">ECI 35</div>
+              <div class="item-description">
+                <ul class="item-list">
+                  <li>Duración: 25 horas</li>
+                  <li>
+                    Temas cubiertos: RESTful APIs, HTTP, integración
+                    frontend-backend
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="course-item">
+              <div class="item-header">
+                <div class="item-title">Desarrollo de Aplicaciones</div>
+                <div class="item-date">2023</div>
+              </div>
+              <div class="item-subtitle">Google & UCM</div>
+              <div class="item-description">
+                <ul class="item-list">
+                  <li>Duración: 30 horas</li>
+                  <li>
+                    Habilidades adquiridas: diseño de apps, interfaces móviles,
+                    prototipado
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="course-item">
+              <div class="item-header">
+                <div class="item-title">Internet de las Cosas (IoT)</div>
+                <div class="item-date">2023</div>
+              </div>
+              <div class="item-subtitle">Universidad de Granada (UGR)</div>
+              <div class="item-description">
+                <ul class="item-list">
+                  <li>Duración: 40 horas</li>
+                  <li>
+                    Temas cubiertos: sensores, conectividad, aplicaciones IoT
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="course-item">
+              <div class="item-header">
+                <div class="item-title">Machine Learning</div>
+                <div class="item-date">2023</div>
+              </div>
+              <div class="item-subtitle">CACIC 2023</div>
+              <div class="item-description">
+                <ul class="item-list">
+                  <li>Duración: 16 horas</li>
+                  <li>
+                    Temas cubiertos: modelos predictivos, entrenamiento
+                    supervisado, regresión
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="course-item">
+              <div class="item-header">
+                <div class="item-title">Deep Learning</div>
+                <div class="item-date">2024</div>
+              </div>
+              <div class="item-subtitle">CACIC 2024</div>
+              <div class="item-description">
+                <ul class="item-list">
+                  <li>Duración: 16 horas</li>
+                  <li>
+                    Temas cubiertos: redes neuronales, clasificación,
+                    optimización
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
         </div>
 
-        <div class="columna">
-          <h2>Cursos Realizados</h2>
-          <ul>
-            <li>Argentina Programa – Desarrollo Web (2022)</li>
-            <li>
-              ECI 35 (2022) – Diseño de sistemas interactivos desde un enfoque
-              centrado en el usuario
-            </li>
-            <li>ECI 35 (2022) – Introducción a las APIs</li>
-            <li>Google & UCM – Desarrollo de Aplicaciones (2023)</li>
-            <li>UGR – Internet de las Cosas (IoT) (2023)</li>
-            <li>CACIC 2023 – Machine learning (2023)</li>
-            <li>CACIC 2024 – Deep Learning (2024)</li>
-          </ul>
+        <div class="column">
+          <section class="section">
+            <h2 class="section-title">
+              <i class="fas fa-project-diagram"></i> Proyectos Destacados
+            </h2>
+
+            <div class="project-item">
+              <div class="item-header">
+                <div class="item-title">PDV Web Local</div>
+                <div class="item-date">En desarrollo</div>
+              </div>
+              <div class="item-subtitle">Desarrollador Fullstack</div>
+              <div class="item-description">
+                <p>
+                  Sistema de punto de venta desarrollado en entorno local con
+                  funcionalidades para gestión de ventas, productos y stock. El
+                  objetivo es migrarlo a una solución web completa con backend
+                  propio.
+                </p>
+                <ul class="item-list">
+                  <li>Tecnologías utilizadas: HTML, CSS, JavaScript</li>
+                  <li>
+                    Impacto: organización eficiente del inventario y registro de
+                    operaciones
+                  </li>
+                  <li>
+                    Planes futuros: integración de backend, login de usuarios y
+                    reportes automáticos
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="project-item">
+              <div class="item-header">
+                <div class="item-title">E-commerce Personal</div>
+                <div class="item-date">En desarrollo</div>
+              </div>
+              <div class="item-subtitle">Desarrollador Fullstack</div>
+              <div class="item-description">
+                <p>
+                  Plataforma de comercio electrónico responsive con
+                  funcionalidades de carrito, gestión administrativa, panel de
+                  productos y conexión a base de datos.
+                </p>
+                <ul class="item-list">
+                  <li>
+                    Tecnologías utilizadas: React, CSS, JavaScript, PostgreSQL
+                  </li>
+                  <li>
+                    Impacto: venta directa desde el sitio con gestión autónoma
+                    del inventario
+                  </li>
+                  <li>
+                    Funcionalidades destacadas: autenticación de usuarios,
+                    interacción dinámica con el frontend
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <section class="section">
+            <h2 class="section-title">
+              <i class="fas fa-lightbulb"></i> Habilidades
+            </h2>
+
+            <h3>Técnicas</h3>
+            <br />
+            <div class="skills-container">
+              <div class="skill">HTML</div>
+              <div class="skill">CSS</div>
+              <div class="skill">JavaScript</div>
+              <div class="skill">React</div>
+              <div class="skill">Node.js</div>
+              <div class="skill">SQLite3</div>
+              <div class="skill">PostgreSQL</div>
+              <div class="skill">Git / GitHub</div>
+              <div class="skill">Firebase</div>
+              <div class="skill">Figma</div>
+            </div>
+            <br />
+            <h3>Herramientas de Oficina y Gestión</h3>
+            <br />
+            <div class="skills-container">
+              <div class="skill">Excel avanzado</div>
+              <div class="skill">Word</div>
+              <div class="skill">Tango Gestión</div>
+              <div class="skill">Facturación</div>
+              <div class="skill">Control de stock</div>
+              <div class="skill">Atención al cliente</div>
+            </div>
+            <br />
+            <h3>Habilidades Blandas</h3>
+            <br />
+            <div class="skills-container">
+              <div class="skill">Comunicación efectiva</div>
+              <div class="skill">Trabajo en equipo</div>
+              <div class="skill">Responsabilidad</div>
+            </div>
+          </section>
+
+          <section class="section">
+            <h2 class="section-title">
+              <i class="fas fa-dollar-sign"></i> Disponibilidad y Remuneración
+            </h2>
+
+            <div class="availability">
+              <i class="fas fa-check-circle available"></i>
+              <div>Disponibilidad inmediata - Full Time</div>
+            </div>
+
+            <div>
+              <p><strong>Remuneración pretendida:</strong> A convenir</p>
+              <p>
+                <strong>Tipo de trabajo preferido:</strong> Presencial, Remoto o
+                Híbrido
+              </p>
+            </div>
+          </section>
+
+          <section class="section">
+            <h2 class="section-title">
+              <i class="fas fa-users"></i> Referencias
+            </h2>
+
+            <div class="reference-item">
+              <div class="reference-name">Agustín Bruno</div>
+              <div class="item-subtitle">Dueño de Remises Bruno</div>
+              <div class="reference-contact">
+                <div>Teléfono: 2346-578260</div>
+                <div>Email: agustinbruno272@gmail.com</div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+
+      <section class="section">
+        <h2 class="section-title"><i class="fas fa-images"></i> Portafolio</h2>
+
+        <div class="portfolio-link">
+          <p>
+            Portfolio de proyectos disponibles en:
+            <a href="https://rizzofs.github.io/Porfolio/" target="_blank">
+              rizzofs.github.io/Porfolio/
+            </a>
+          </p>
         </div>
       </section>
-      <section>
-        <h2>Proyectos Destacados</h2>
-        <ul>
-          <li>
-            <strong>PDV Web Local</strong> (en desarrollo)<br />
-            Sistema de punto de venta desarrollado en entorno local con
-            tecnologías web. Gestión de ventas, productos y stock. Planificado
-            para migrar a solución 100% online.
-          </li>
-          <li>
-            <strong>E-commerce Personal</strong> (en desarrollo)<br />
-            Plataforma de comercio electrónico responsive con carrito, pasarela
-            de pago y administración de productos. Integración con bases de
-            datos y panel de gestión.
-          </li>
-        </ul>
-      </section>
 
-      <section>
-        <h2>Habilidades</h2>
-        <ul>
-          <li>Excel avanzado, Word, PowerPoint, Tango Gestión</li>
-          <li>Facturación, control de novedades y asistencia administrativa</li>
-          <li>Coordinación de personal y tareas</li>
-          <li>Trato con clientes y resolución de reclamos</li>
-          <li>Comunicación y responsabilidad</li>
-        </ul>
-      </section>
-
-      <section>
-        <h2>Disponibilidad y Remuneración Pretendida</h2>
-        <p><strong>Disponibilidad:</strong> Full Time</p>
-        <p><strong>Remuneración pretendida:</strong> A convenir</p>
-      </section>
-
-      <section>
-        <h2>Referencias</h2>
-        <p>Agustín Bruno – Dueño de Remises Bruno</p>
-        <p>Teléfono: 2346-578260</p>
-      </section>
-      <section>
-        <h2>Portfolio</h2>
-        <p>
-          Podés ver una selección de mis proyectos en:
-          <a href="https://rizzofs.github.io/Porfolio/" target="_blank"
-            >github.com/rizzofs/Porfolio</a
-          >
-        </p>
-      </section>
-
-      <footer
-        style="
-          text-align: center;
-          margin-top: 40px;
-          font-size: 12px;
-          color: #888;
-        "
-      >
-        Actualizado: Julio 2025
+      <footer>
+        <p>Actualizado: Julio 2025 | Federico Rizzo | Estudiante de Sistemas</p>
       </footer>
     </div>
   </body>
