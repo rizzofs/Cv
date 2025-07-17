@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CV - Federico Rizzo</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.4;
+        color: #333;
+        background: white;
+        font-size: 12px;
+      }
+
+      .container {
+        max-width: 210mm;
+        margin: 0 auto;
+        padding: 10mm;
+        background: white;
+      }
+
+      /* Header */
+      header {
+        border-bottom: 2px solid #2c3e50;
+        padding-bottom: 8px;
+        margin-bottom: 12px;
+      }
+
+      .header-content {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+      }
+
+      .profile-img {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 2px solid #2c3e50;
+      }
+
+      .header-text {
+        flex: 1;
+      }
+
+      h1 {
+        font-size: 22px;
+        color: #2c3e50;
+        margin-bottom: 2px;
+        font-weight: bold;
+      }
+
+      .title {
+        font-size: 14px;
+        color: #7f8c8d;
+        margin-bottom: 4px;
+        font-weight: 500;
+      }
+
+      .contact-info {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        font-size: 11px;
+      }
+
+      .contact-item {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+      }
+
+      .contact-item i {
+        color: #2c3e50;
+        width: 12px;
+      }
+
+      .contact-link {
+        color: #2c3e50;
+        text-decoration: none;
+      }
+
+      /* Sections */
+      .section {
+        margin-bottom: 12px;
+        page-break-inside: avoid;
+      }
+
+      .section-title {
+        font-size: 14px;
+        color: #2c3e50;
+        border-bottom: 1px solid #bdc3c7;
+        padding-bottom: 3px;
+        margin-bottom: 8px;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+
+      .section-title i {
+        color: #3498db;
+      }
+
+      /* Two column layout */
+      .two-column {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+        margin-bottom: 12px;
+      }
+
+      .column {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      /* Single column for full width sections */
+      .full-width {
+        grid-column: 1 / -1;
+      }
+
+      /* Profile text */
+      .profile-text {
+        font-size: 11px;
+        text-align: justify;
+        line-height: 1.3;
+      }
+
+      .profile-text p {
+        margin-bottom: 6px;
+      }
+
+      /* Experience and Course items */
+      .experience-item,
+      .course-item,
+      .project-item {
+        margin-bottom: 8px;
+        page-break-inside: avoid;
+      }
+
+      .item-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 2px;
+      }
+
+      .item-title {
+        font-size: 12px;
+        font-weight: bold;
+        color: #2c3e50;
+        flex: 1;
+      }
+
+      .item-date {
+        font-size: 10px;
+        color: #7f8c8d;
+        font-weight: 500;
+        text-align: right;
+        min-width: 60px;
+      }
+
+      .item-subtitle {
+        font-size: 11px;
+        color: #3498db;
+        font-weight: 500;
+        margin-bottom: 3px;
+      }
+
+      .item-description {
+        font-size: 10px;
+        line-height: 1.2;
+      }
+
+      .item-description p {
+        margin-bottom: 3px;
+      }
+
+      .item-list {
+        list-style: none;
+        padding-left: 0;
+      }
+
+      .item-list li {
+        position: relative;
+        padding-left: 8px;
+        margin-bottom: 1px;
+      }
+
+      .item-list li:before {
+        content: "•";
+        color: #3498db;
+        position: absolute;
+        left: 0;
+      }
+
+      /* Skills */
+      .skills-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4px;
+        margin-bottom: 8px;
+      }
+
+      .skill {
+        background: #ecf0f1;
+        color: #2c3e50;
+        padding: 2px 6px;
+        border-radius: 3px;
+        font-size: 10px;
+        font-weight: 500;
+        border: 1px solid #bdc3c7;
+      }
+
+      .skills-section h3 {
+        font-size: 12px;
+        color: #2c3e50;
+        margin-bottom: 4px;
+        font-weight: bold;
+      }
+
+      /* Availability */
+      .availability {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        margin-bottom: 6px;
+        font-size: 11px;
+      }
+
+      .available {
+        color: #27ae60;
+      }
+
+      /* References */
+      .reference-item {
+        margin-bottom: 6px;
+      }
+
+      .reference-name {
+        font-size: 12px;
+        font-weight: bold;
+        color: #2c3e50;
+      }
+
+      .reference-contact {
+        font-size: 10px;
+        color: #7f8c8d;
+        margin-top: 2px;
+      }
+
+      /* Portfolio */
+      .portfolio-link {
+        font-size: 11px;
+      }
+
+      .portfolio-link a {
+        color: #3498db;
+        text-decoration: none;
+        font-weight: 500;
+      }
+
+      /* Footer */
+      footer {
+        text-align: center;
+        font-size: 10px;
+        color: #7f8c8d;
+        margin-top: 12px;
+        padding-top: 8px;
+        border-top: 1px solid #ecf0f1;
+      }
+
+      /* Print specific styles */
+      @media print {
+        body {
+          font-size: 9px;
+        }
+        
+        .container {
+          padding: 5mm;
+        }
+        
+        .section {
+          margin-bottom: 8px;
+        }
+        
+        .two-column {
+          gap: 10px;
+        }
+        
+        .experience-item,
+        .course-item,
+        .project-item {
+          margin-bottom: 6px;
+        }
+        
+        .item-list li {
+          margin-bottom: 0;
+        }
+        
+        .skills-container {
+          gap: 3px;
+        }
+        
+        .skill {
+          padding: 1px 4px;
+          font-size: 7px;
+        }
+      }
+
+      /* Page break control */
+      .page-break {
+        page-break-before: always;
+      }
+
+      /* Force page break for second page content */
+      .second-page {
+        page-break-before: always;
+        margin-top: 10px;
+      }
+
+      /* Compact mode for very tight spaces */
+      .compact {
+        margin-bottom: 3px;
+      }
+
+      .compact .item-header {
+        margin-bottom: 1px;
+      }
+
+      .compact .item-description {
+        font-size: 9px;
+      }
+
+      .compact .item-list li {
+        margin-bottom: 0;
+      }
+
+      /* Ultra compact for very tight spaces */
+      .ultra-compact {
+        margin-bottom: 2px;
+      }
+
+      .ultra-compact .item-description {
+        font-size: 8px;
+      }
+
+      .ultra-compact .item-list li {
+        margin-bottom: 0;
+        line-height: 1.1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="header-content">
+          <img
+            src="Foto.jpeg"
+            alt="Retrato profesional"
+            class="profile-img"
+          />
+          <div class="header-text">
+            <h1>Federico Sebastián Rizzo</h1>
+            <div class="title">Estudiante Lic. en Sistemas de Información</div>
+            <div class="contact-info">
+              <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <a href="mailto:federico.s.rizzo@gmail.com" class="contact-link">federico.s.rizzo@gmail.com</a>
+              </div>
+              <div class="contact-item">
+                <i class="fas fa-phone"></i>
+                <a href="https://wa.me/5492346612609" target="_blank" class="contact-link">+5492346612609</a>
+              </div>
+              <div class="contact-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Chivilcoy, Buenos Aires</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <section class="section">
+        <h2 class="section-title">
+          <i class="fas fa-user"></i> Perfil Profesional
+        </h2>
+        <div class="profile-text">
+          <p>
+            Desarrollador web junior con sólida formación académica y experiencia práctica en proyectos reales. 
+            Estudiante avanzado de la Licenciatura en Sistemas de Información (UNLu), con competencias en 
+            desarrollo frontend y backend utilizando HTML, CSS, JavaScript, React, Git y bases de datos relacionales.
+          </p>
+          <p>
+            Actualmente me desempeño como presidente del centro de estudiantes, rol en el que potencio mis 
+            habilidades de liderazgo, organización y trabajo en equipo. Complemento mi perfil técnico con 
+            experiencia en tareas administrativas, facturación y atención al cliente.
+          </p>
+        </div>
+      </section>
+
+      <div class="two-column">
+        <div class="column">
+          <section class="section">
+            <h2 class="section-title">
+              <i class="fas fa-briefcase"></i> Experiencia Laboral
+            </h2>
+
+            <div class="experience-item compact">
+              <div class="item-header">
+                <div class="item-title">Coordinador y Asistente de Facturación</div>
+                <div class="item-date">Oct. 2016 – Actualidad</div>
+              </div>
+              <div class="item-subtitle">Remises Bruno</div>
+              <div class="item-description">
+                <ul class="item-list">
+                  <li>Coordinación de personal y asignación de turnos</li>
+                  <li>Gestión de facturación y tareas administrativas</li>
+                  <li>Atención al cliente y resolución de consultas</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="experience-item compact">
+              <div class="item-header">
+                <div class="item-title">Atención al público</div>
+                <div class="item-date">Sep. 2023 – Mar. 2024</div>
+              </div>
+              <div class="item-subtitle">Maxikiosco Matute</div>
+              <div class="item-description">
+                <ul class="item-list">
+                  <li>Atención directa al cliente y manejo de caja</li>
+                  <li>Reposición de mercadería y control de stock</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="experience-item compact">
+              <div class="item-header">
+                <div class="item-title">Capacitador de Autoridades de Mesa</div>
+                <div class="item-date">2023</div>
+              </div>
+              <div class="item-subtitle">Elecciones Nacionales</div>
+              <div class="item-description">
+                <ul class="item-list">
+                  <li>Dictado de cursos de capacitación a autoridades de mesa</li>
+                  <li>Preparación de personal para las elecciones nacionales</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="experience-item compact">
+              <div class="item-header">
+                <div class="item-title">Coordinador</div>
+                <div class="item-date">Jun. 2016 – Oct. 2016</div>
+              </div>
+              <div class="item-subtitle">Remises City Bruno</div>
+              <div class="item-description">
+                <ul class="item-list">
+                  <li>Gestión de horarios y turnos</li>
+                  <li>Manejo de documentación interna</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="experience-item compact">
+              <div class="item-header">
+                <div class="item-title">Vendedor - Repartidor</div>
+                <div class="item-date">Sep. 2012 – Ene. 2015</div>
+              </div>
+              <div class="item-subtitle">Distri-Fer</div>
+              <div class="item-description">
+                <ul class="item-list">
+                  <li>Entrega y distribución de productos</li>
+                  <li>Gestión de cobranzas y control de stock</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="experience-item compact">
+              <div class="item-header">
+                <div class="item-title">Delivery / Ayudante de Cocina</div>
+                <div class="item-date">Sep. 2011 – Dic. 2012</div>
+              </div>
+              <div class="item-subtitle">Bartolo Pub-Bar</div>
+              <div class="item-description">
+                <ul class="item-list">
+                  <li>Reparto de pedidos a domicilio</li>
+                  <li>Asistencia en tareas de cocina</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="experience-item compact">
+              <div class="item-header">
+                <div class="item-title">Operario de Depósito</div>
+                <div class="item-date">Nov. 2011 – Ene. 2012</div>
+              </div>
+              <div class="item-subtitle">City Shop</div>
+              <div class="item-description">
+                <ul class="item-list">
+                  <li>Inventario de productos</li>
+                  <li>Organización de stock</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="experience-item compact">
+              <div class="item-header">
+                <div class="item-title">Profesor Auxiliar</div>
+                <div class="item-date">May. 2011 – Ago. 2011</div>
+              </div>
+              <div class="item-subtitle">Instituto Tecnológico</div>
+              <div class="item-description">
+                <ul class="item-list">
+                  <li>Dictado de cursos de informática básica</li>
+                  <li>Asistencia y acompañamiento educativo</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="experience-item compact">
+              <div class="item-header">
+                <div class="item-title">Asistente Comercial</div>
+                <div class="item-date">Feb. 2009 – Sep. 2010</div>
+              </div>
+              <div class="item-subtitle">Talleres Carmona (Molykote)</div>
+              <div class="item-description">
+                <ul class="item-list">
+                  <li>Facturación y atención comercial</li>
+                  <li>Uso de Tango Gestión y Excel</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="experience-item compact">
+              <div class="item-header">
+                <div class="item-title">Ayudante de Cocina</div>
+                <div class="item-date">Sep. 2008 – Ene. 2009</div>
+              </div>
+              <div class="item-subtitle">Mora Resto Bar</div>
+              <div class="item-description">
+                <ul class="item-list">
+                  <li>Preparación de comidas</li>
+                  <li>Asistencia al cocinero principal</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="experience-item compact">
+              <div class="item-header">
+                <div class="item-title">Atención Sala de Juegos</div>
+                <div class="item-date">Oct. 2007 – Sep. 2008</div>
+              </div>
+              <div class="item-subtitle">Shopping El Molino</div>
+              <div class="item-description">
+                <ul class="item-list">
+                  <li>Atención al cliente</li>
+                  <li>Supervisión del área de juegos</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="experience-item compact">
+              <div class="item-header">
+                <div class="item-title">Operario</div>
+                <div class="item-date">Ene. 2007 – Ago. 2007</div>
+              </div>
+              <div class="item-subtitle">Paquetá</div>
+              <div class="item-description">
+                <ul class="item-list">
+                  <li>Producción en línea</li>
+                  <li>Control de calidad de productos</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <div class="column">
+          <section class="section">
+            <h2 class="section-title">
+              <i class="fas fa-graduation-cap"></i> Formación Académica
+            </h2>
+
+            <div class="course-item compact">
+              <div class="item-header">
+                <div class="item-title">Licenciatura en Sistemas de Información</div>
+                <div class="item-date">En curso</div>
+              </div>
+              <div class="item-subtitle">Universidad Nacional de Luján (UNLu)</div>
+              <div class="item-description">
+                <ul class="item-list">
+                  <li>Área de enfoque: programación, sistemas, UX y proyectos tecnológicos</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="course-item compact">
+              <div class="item-header">
+                <div class="item-title">Secundario completo</div>
+                <div class="item-date">Finalizado</div>
+              </div>
+              <div class="item-subtitle">Escuela N°11, Chivilcoy</div>
+            </div>
+          </section>
+
+          <section class="section">
+            <h2 class="section-title">
+              <i class="fas fa-certificate"></i> Cursos Destacados
+            </h2>
+
+            <div class="course-item compact">
+              <div class="item-header">
+                <div class="item-title">Desarrollo Web</div>
+                <div class="item-date">2022</div>
+              </div>
+              <div class="item-subtitle">Argentina Programa</div>
+              <div class="item-description">
+                <ul class="item-list">
+                  <li>HTML, CSS, JS, diseño adaptativo</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="course-item compact">
+              <div class="item-header">
+                <div class="item-title">Diseño de sistemas interactivos</div>
+                <div class="item-date">2022</div>
+              </div>
+              <div class="item-subtitle">ECI 35</div>
+              <div class="item-description">
+                <ul class="item-list">
+                  <li>Diseño centrado en el usuario, wireframes, accesibilidad</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="course-item compact">
+              <div class="item-header">
+                <div class="item-title">Introducción a las APIs</div>
+                <div class="item-date">2022</div>
+              </div>
+              <div class="item-subtitle">ECI 35</div>
+              <div class="item-description">
+                <ul class="item-list">
+                  <li>RESTful APIs, HTTP, integración frontend-backend</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="course-item compact">
+              <div class="item-header">
+                <div class="item-title">Desarrollo de Aplicaciones</div>
+                <div class="item-date">2023</div>
+              </div>
+              <div class="item-subtitle">Google & UCM</div>
+              <div class="item-description">
+                <ul class="item-list">
+                  <li>Diseño de apps, interfaces móviles, prototipado</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="course-item compact">
+              <div class="item-header">
+                <div class="item-title">Internet de las Cosas (IoT)</div>
+                <div class="item-date">2023</div>
+              </div>
+              <div class="item-subtitle">Universidad de Granada (UGR)</div>
+              <div class="item-description">
+                <ul class="item-list">
+                  <li>Sensores, conectividad, aplicaciones IoT</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="course-item compact">
+              <div class="item-header">
+                <div class="item-title">Machine Learning</div>
+                <div class="item-date">2023</div>
+              </div>
+              <div class="item-subtitle">CACIC 2023</div>
+              <div class="item-description">
+                <ul class="item-list">
+                  <li>Modelos predictivos, entrenamiento supervisado, regresión</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="course-item compact">
+              <div class="item-header">
+                <div class="item-title">Deep Learning</div>
+                <div class="item-date">2024</div>
+              </div>
+              <div class="item-subtitle">CACIC 2024</div>
+              <div class="item-description">
+                <ul class="item-list">
+                  <li>Redes neuronales, clasificación, optimización</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+
+      <section class="section second-page">
+        <h2 class="section-title">
+          <i class="fas fa-project-diagram"></i> Proyectos Destacados
+        </h2>
+
+        <div class="two-column">
+          <div class="project-item compact">
+            <div class="item-header">
+              <div class="item-title">PDV Web Local</div>
+              <div class="item-date">En desarrollo</div>
+            </div>
+            <div class="item-subtitle">Desarrollador Fullstack</div>
+            <div class="item-description">
+              <p>Sistema de punto de venta con gestión de ventas, productos y stock.</p>
+              <ul class="item-list">
+                <li>Tecnologías: HTML, CSS, JavaScript</li>
+                <li>Planes: migración a solución web completa</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="project-item compact">
+            <div class="item-header">
+              <div class="item-title">E-commerce Personal</div>
+              <div class="item-date">En desarrollo</div>
+            </div>
+            <div class="item-subtitle">Desarrollador Fullstack</div>
+            <div class="item-description">
+              <p>Plataforma de comercio electrónico responsive con carrito y gestión administrativa.</p>
+              <ul class="item-list">
+                <li>Tecnologías: React, CSS, JavaScript, PostgreSQL</li>
+                <li>Funcionalidades: autenticación, panel de productos</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">
+          <i class="fas fa-lightbulb"></i> Habilidades
+        </h2>
+
+        <div class="two-column">
+          <div class="skills-section">
+            <h3>Técnicas</h3>
+            <div class="skills-container">
+              <div class="skill">HTML</div>
+              <div class="skill">CSS</div>
+              <div class="skill">JavaScript</div>
+              <div class="skill">React</div>
+              <div class="skill">Node.js</div>
+              <div class="skill">PostgreSQL</div>
+              <div class="skill">Git</div>
+              <div class="skill">Firebase</div>
+            </div>
+          </div>
+
+          <div class="skills-section">
+            <h3>Herramientas y Gestión</h3>
+            <div class="skills-container">
+              <div class="skill">Excel avanzado</div>
+              <div class="skill">Tango Gestión</div>
+              <div class="skill">Facturación</div>
+              <div class="skill">Control de stock</div>
+              <div class="skill">Atención al cliente</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skills-section">
+          <h3>Habilidades Blandas</h3>
+          <div class="skills-container">
+            <div class="skill">Comunicación efectiva</div>
+            <div class="skill">Trabajo en equipo</div>
+            <div class="skill">Liderazgo</div>
+            <div class="skill">Responsabilidad</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">
+          <i class="fas fa-dollar-sign"></i> Disponibilidad y Remuneración
+        </h2>
+
+        <div class="availability">
+          <i class="fas fa-check-circle available"></i>
+          <div>Disponibilidad inmediata - Full Time</div>
+        </div>
+
+        <div style="font-size: 11px;">
+          <p><strong>Remuneración pretendida:</strong> A convenir</p>
+          <p><strong>Tipo de trabajo preferido:</strong> Presencial, Remoto o Híbrido</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">
+          <i class="fas fa-users"></i> Referencias
+        </h2>
+
+        <div class="reference-item">
+          <div class="reference-name">Agustín Bruno</div>
+          <div class="item-subtitle">Dueño de Remises Bruno</div>
+          <div class="reference-contact">
+            <div>Teléfono: 2346-578260 | Email: agustinbruno272@gmail.com</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">
+          <i class="fas fa-images"></i> Portfolio
+        </h2>
+
+        <div class="portfolio-link">
+          <p>
+            Portfolio de proyectos: 
+            <a href="https://rizzofs.github.io/Mi-Porfolio2/" target="_blank">
+              https://rizzofs.github.io/Mi-Porfolio2/
+            </a>
+          </p>
+        </div>
+      </section>
+
+      <footer>
+        <p>Actualizado: Julio 2025 | Federico Rizzo | Estudiante de Sistemas</p>
+      </footer>
+    </div>
+      </body>
+  </html> 

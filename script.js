@@ -242,5 +242,61 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    // CV Print PDF Download functionality
+    const downloadCvBtn = document.getElementById('download-cv-pdf');
+    if (downloadCvBtn) {
+        downloadCvBtn.addEventListener('click', function() {
+            // Show loading state
+            const originalText = this.innerHTML;
+            this.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Descargando CV PDF...';
+            this.disabled = true;
+            
+            // Create a temporary link element to download the PDF
+            const link = document.createElement('a');
+            link.href = '2025 -CV - Federico Rizzo.pdf';
+            link.download = 'CV_Federico_Rizzo_2025.pdf';
+            link.style.display = 'none';
+            
+            // Add link to document and trigger download
+            document.body.appendChild(link);
+            link.click();
+            
+            // Remove the link element
+            document.body.removeChild(link);
+            
+            // Restore button state after a short delay
+            setTimeout(() => {
+                this.innerHTML = originalText;
+                this.disabled = false;
+                
+                // Show success message
+                const successMsg = document.createElement('div');
+                successMsg.textContent = 'CV PDF descargado exitosamente!';
+                successMsg.style.cssText = `
+                    position: fixed;
+                    top: 20px;
+                    right: 20px;
+                    background: #27ae60;
+                    color: white;
+                    padding: 10px 15px;
+                    border-radius: 5px;
+                    z-index: 1000;
+                    font-size: 14px;
+                    opacity: 0;
+                    transition: opacity 0.3s ease;
+                `;
+                
+                document.body.appendChild(successMsg);
+                setTimeout(() => successMsg.style.opacity = '1', 100);
+                setTimeout(() => {
+                    successMsg.style.opacity = '0';
+                    setTimeout(() => {
+                        document.body.removeChild(successMsg);
+                    }, 300);
+                }, 3000);
+            }, 500);
+        });
+    }
+
     console.log('CV Interactive Features loaded successfully!');
 }); 

@@ -176,6 +176,12 @@ h1 {
   background-color: #c0392b;
 }
 
+.btn-download:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
 .download-section {
   text-align: center;
   padding: 20px;
